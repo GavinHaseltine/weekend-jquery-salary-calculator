@@ -39,4 +39,14 @@ function handleSubmit (event) {
         <td><button class="deleteButton">Delete Employee</button></td>
       </tr> `)
 
+
+      $('#firstNameSubmit').val("")
+      $('#lastNameSubmit').val("")
+      $('#employeeIdSubmit').val("")
+      $('#jobTitleSubmit').val("")
+      $('#annualSalarySubmit').val("")
+
+
 }
+
+
