@@ -1,5 +1,5 @@
 body {
-    background-color: #dcdcdc;
+    background-color: lightgrey;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #313131;
     font-size: 1.25em;
@@ -8,14 +8,14 @@ body {
 
 
   thead {
-    background: #7a7a7a;
+    background: lightslategray;
     color: #fcfcfc;
   }
   tbody tr:nth-child(odd){ 
-    background: #fcfcfc;
+    background: gray;
   }
   tbody tr:nth-child(even){
-    background: #dcdcdc;
+    background: darkgray;
   }
 
 
@@ -32,3 +32,4 @@ body {
     padding: .5em;
     min-width: 3.5em;
   }
+

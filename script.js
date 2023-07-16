@@ -14,20 +14,26 @@ function deleteEmployee(){
     $(this).parent().parent().remove()
 }
 
+let annualyTotal = 0;
+
 function handleSubmit (event) {
     event.preventDefault();
-    console.log('In Handle Submit');
+    //console.log('In Handle Submit');
 
     const firstNameText = $('#firstNameSubmit').val();
-    console.log(firstNameText);
+    //console.log(firstNameText);
     const lastNameText = $('#lastNameSubmit').val();
-    console.log(lastNameText);
+    //console.log(lastNameText);
     const employeeIdText = $('#employeeIdSubmit').val();
-    console.log(employeeIdText);
+    //console.log(employeeIdText);
     const jobTitleText = $('#jobTitleSubmit').val();
-    console.log(jobTitleText);
-    const annualSalaryText = $('#annualSalarySubmit').val();
-    console.log(annualSalaryText);
+    //console.log(jobTitleText);
+    const annualSalaryText = Number($('#annualSalarySubmit').val());
+    //console.log(annualSalaryText);
+
+    
+ 
+    let monthlyCost =  annualyTotal += annualSalaryText / 12;
 
     $('#tableBody').append(`
      <tr>
@@ -46,7 +52,14 @@ function handleSubmit (event) {
       $('#jobTitleSubmit').val("")
       $('#annualSalarySubmit').val("")
 
+ console.log(monthlyCost);
+ $('#monthCost').text(`Monthly Cost: $
+ ${Math.round(monthlyCost)}
+ `)
+
+if(monthlyCost > 20000){
+console.log('???');
+$('#monthCost').css('background-color', 'red')
 
 }
-
-
+}
